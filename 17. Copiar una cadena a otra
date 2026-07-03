@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+void copiarCadena(const char *origen, char *destino);
+
+void copiarCadena(const char *origen, char *destino){
+    const char *p = origen;
+    char *q = destino;
+    while(*p != '\0'){
+        *q = *p;
+        p++;
+        q++;
+    }
+    *q = '\0';
+}
+
+int main(int argc, char** argv) {
+    char original[100], copia[100];
+    printf("Ingrese texto: ");
+    scanf("%s", original);
+    copiarCadena(original, copia);
+    printf("Copia: %s\n", copia);
+
+    system("pause");
+    return 0;
+}
