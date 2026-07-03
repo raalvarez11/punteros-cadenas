@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+void cambiarValor(int *n);
+
+void cambiarValor(int *n){
+    *n = 100;
+}
+
+int main(int argc, char** argv) {
+    int num;
+    printf("Ingrese un numero: ");
+    scanf("%d", &num);
+    printf("Antes: %d\n", num);
+    cambiarValor(&num);
+    printf("Despues: %d\n", num);
+
+    system("pause");
+    return 0;
+}
