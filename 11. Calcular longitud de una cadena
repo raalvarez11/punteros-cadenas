@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+int longitud(const char *cad);
+
+int longitud(const char *cad){
+    const char *p = cad;
+    while(*p != '\0'){
+        p++;
+    }
+    return p - cad;
+}
+
+int main(int argc, char** argv) {
+    char texto[100];
+    printf("Ingrese una palabra: ");
+    scanf("%s", texto);
+    printf("La longitud es: %d\n", longitud(texto));
+
+    system("pause");
+    return 0;
+}
