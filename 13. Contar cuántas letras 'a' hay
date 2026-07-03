@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+int contarLetraA(const char *cad);
+
+int contarLetraA(const char *cad){
+    const char *p = cad;
+    int cont = 0;
+    while(*p != '\0'){
+        if(*p == 'a' || *p == 'A')
+            cont = cont + 1;
+        p++;
+    }
+    return cont;
+}
+
+int main(int argc, char** argv) {
+    char palabra[100];
+    printf("Ingrese texto: ");
+    scanf("%s", palabra);
+    printf("Cantidad de letras 'a': %d\n", contarLetraA(palabra));
+
+    system("pause");
+    return 0;
+}
