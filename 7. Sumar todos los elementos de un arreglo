@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+int sumaArreglo(int *arr, int tam);
+
+int sumaArreglo(int *arr, int tam){
+    int *p, total = 0;
+    for(p = arr; p < arr + tam; p++){
+        total = total + *p;
+    }
+    return total;
+}
+
+int main(int argc, char** argv) {
+    int datos[4] = {1, 2, 3, 4};
+    printf("Suma total: %d\n", sumaArreglo(datos, 4));
+
+    system("pause");
+    return 0;
+}
