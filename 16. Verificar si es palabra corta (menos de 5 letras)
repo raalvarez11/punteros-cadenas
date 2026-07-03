@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+int esCorta(const char *cad);
+
+int esCorta(const char *cad){
+    const char *p = cad;
+    int tam = 0;
+    while(*p != '\0'){
+        tam++;
+        p++;
+    }
+    return (tam < 5) ? 1 : 0;
+}
+
+int main(int argc, char** argv) {
+    char palabra[100];
+    printf("Ingrese palabra: ");
+    scanf("%s", palabra);
+    if(esCorta(palabra))
+        printf("Es una palabra corta\n");
+    else
+        printf("Es una palabra larga\n");
+
+    system("pause");
+    return 0;
+}
