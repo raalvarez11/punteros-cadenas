@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+void quitarEspacios(char *cad);
+
+void quitarEspacios(char *cad){
+    char *p = cad, *q = cad;
+    while(*p != '\0'){
+        if(*p != ' '){
+            *q = *p;
+            q++;
+        }
+        p++;
+    }
+    *q = '\0';
+}
+
+int main(int argc, char** argv) {
+    char texto[200];
+    printf("Ingrese texto con espacios: ");
+    getchar();
+    fgets(texto, 200, stdin);
+    quitarEspacios(texto);
+    printf("Sin espacios: %s\n", texto);
+
+    system("pause");
+    return 0;
+}
