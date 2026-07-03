@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+int buscarLetra(const char *cad, char letra);
+
+int buscarLetra(const char *cad, char letra){
+    const char *p = cad;
+    while(*p != '\0'){
+        if(*p == letra)
+            return 1;
+        p++;
+    }
+    return 0;
+}
+
+int main(int argc, char** argv) {
+    char palabra[100], car;
+    printf("Ingrese palabra: ");
+    scanf("%s", palabra);
+    printf("Ingrese letra a buscar: ");
+    scanf(" %c", &car);
+    if(buscarLetra(palabra, car))
+        printf("La letra existe en la palabra\n");
+    else
+        printf("La letra NO existe\n");
+
+    system("pause");
+    return 0;
+}
