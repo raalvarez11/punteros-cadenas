@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+void cuadrado(int *n);
+
+void cuadrado(int *n){
+    *n = (*n) * (*n);
+}
+
+int main(int argc, char** argv) {
+    int num;
+    printf("Ingrese un numero: ");
+    scanf("%d", &num);
+    cuadrado(&num);
+    printf("Su cuadrado es: %d\n", num);
+
+    system("pause");
+    return 0;
+}
