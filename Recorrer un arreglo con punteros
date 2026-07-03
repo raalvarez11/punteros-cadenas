@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+void mostrarArreglo(int *arr, int tam);
+
+void mostrarArreglo(int *arr, int tam){
+    int *p;
+    for(p = arr; p < arr + tam; p++){
+        printf("%d ", *p);
+    }
+}
+
+int main(int argc, char** argv) {
+    int numeros[5] = {2, 4, 6, 8, 10};
+    printf("Elementos del arreglo: ");
+    mostrarArreglo(numeros, 5);
+    printf("\n");
+
+    system("pause");
+    return 0;
+}
