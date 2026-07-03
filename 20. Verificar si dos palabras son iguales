@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+int sonIguales(const char *c1, const char *c2);
+
+int sonIguales(const char *c1, const char *c2){
+    const char *p = c1, *q = c2;
+    while(*p != '\0' && *q != '\0'){
+        if(*p != *q)
+            return 0;
+        p++;
+        q++;
+    }
+    return (*p == '\0' && *q == '\0') ? 1 : 0;
+}
+
+int main(int argc, char** argv) {
+    char palabra1[100], palabra2[100];
+    printf("Ingrese primera palabra: ");
+    scanf("%s", palabra1);
+    printf("Ingrese segunda palabra: ");
+    scanf("%s", palabra2);
+    if(sonIguales(palabra1, palabra2))
+        printf("Las palabras son iguales\n");
+    else
+        printf("Las palabras son diferentes\n");
+
+    system("pause");
+    return 0;
+}
