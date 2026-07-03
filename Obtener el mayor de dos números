@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+int mayor(int *a, int *b);
+
+int mayor(int *a, int *b){
+    if(*a > *b)
+        return *a;
+    else
+        return *b;
+}
+
+int main(int argc, char** argv) {
+    int x, y;
+    printf("Ingrese dos numeros: ");
+    scanf("%d %d", &x, &y);
+    printf("El mayor es: %d\n", mayor(&x, &y));
+
+    system("pause");
+    return 0;
+}
