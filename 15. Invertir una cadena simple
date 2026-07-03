@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+void invertir(char *cad);
+
+void invertir(char *cad){
+    char *inicio = cad;
+    char *fin = cad + strlen(cad) - 1;
+    char aux;
+    while(inicio < fin){
+        aux = *inicio;
+        *inicio = *fin;
+        *fin = aux;
+        inicio++;
+        fin--;
+    }
+}
+
+int main(int argc, char** argv) {
+    char palabra[100];
+    printf("Ingrese palabra: ");
+    scanf("%s", palabra);
+    invertir(palabra);
+    printf("Invertida: %s\n", palabra);
+
+    system("pause");
+    return 0;
+}
