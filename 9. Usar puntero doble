@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+int main(int argc, char** argv) {
+    int a = 50;
+    int *p = &a;
+    int **q = &p;
+
+    printf("Valor de a: %d\n", a);
+    printf("Valor por puntero simple: %d\n", *p);
+    printf("Valor por puntero doble: %d\n", **q);
+
+    **q = 200;
+    printf("Nuevo valor de a: %d\n", a);
+
+    system("pause");
+    return 0;
+}
