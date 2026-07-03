@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+void aMayusculas(char *cad);
+
+void aMayusculas(char *cad){
+    char *p = cad;
+    while(*p != '\0'){
+        if(*p >= 'a' && *p <= 'z'){
+            *p = *p - 32;
+        }
+        p++;
+    }
+}
+
+int main(int argc, char** argv) {
+    char texto[100];
+    printf("Ingrese en minusculas: ");
+    scanf("%s", texto);
+    aMayusculas(texto);
+    printf("En mayusculas: %s\n", texto);
+
+    system("pause");
+    return 0;
+}
