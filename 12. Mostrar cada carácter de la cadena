@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <conio.h>
+#include <string.h>
+
+void mostrarCaracteres(const char *cad);
+
+void mostrarCaracteres(const char *cad){
+    const char *p = cad;
+    while(*p != '\0'){
+        printf("%c ", *p);
+        p++;
+    }
+}
+
+int main(int argc, char** argv) {
+    char frase[100];
+    printf("Ingrese una palabra: ");
+    scanf("%s", frase);
+    printf("Caracteres: ");
+    mostrarCaracteres(frase);
+    printf("\n");
+
+    system("pause");
+    return 0;
+}
