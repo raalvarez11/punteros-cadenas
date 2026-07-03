@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+int main(int argc, char** argv) {
+    int a, *p;
+    a = 25;
+    p = &a;
+
+    printf("Valor de a: %d\n", a);
+    printf("Direccion de a: %p\n", &a);
+    printf("Valor guardado en el puntero: %p\n", p);
+    printf("Valor accedido desde el puntero: %d\n", *p);
+
+    system("pause");
+    return 0;
+}
